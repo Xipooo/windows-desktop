@@ -168,7 +168,7 @@ namespace BeanTraderServer
             TradeOffers.AddOrUpdate(tradeOffer.Id, tradeOffer, (id, oldOffer) => tradeOffer);
             Log.Information("New trade offer ({TradeOfferId}) listed by {UserId}", tradeOffer.Id, seller.Id);
 
-            List<string> invalidCallbacks = new List<string>();
+            var invalidCallbacks = new List<string>();
             foreach (var callback in Callbacks)
             {
                 try
@@ -201,7 +201,7 @@ namespace BeanTraderServer
 
             if (TradeOffers.TryRemove(offerId, out TradeOffer tradeOffer))
             {
-                List<string> invalidCallbacks = new List<string>();
+                var invalidCallbacks = new List<string>();
                 foreach (var callback in Callbacks)
                 {
                     try

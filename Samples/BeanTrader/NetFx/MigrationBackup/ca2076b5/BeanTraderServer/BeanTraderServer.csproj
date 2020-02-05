@@ -60,8 +60,7 @@
     <None Include="BeanTrader.pfx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="old_packages.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BeanTraderInterfaces\BeanTraderCommon.csproj">
